@@ -14,9 +14,8 @@ class App extends React.Component {
   }
   handleClick(event) {
     store.dispatch(isLoading(false))
-    store.dispatch(nextPage(event.target.id))
+    store.dispatch(nextPage(+event.target.id))
     setTimeout(()=>{store.dispatch(isLoading(true))},1000)
-    console.log(event.target.id)
   }
   componentWillMount() {
     axios('https://cors-anywhere.herokuapp.com/http://dev.frevend.com/json/users.json').then(response => {
@@ -31,7 +30,6 @@ class App extends React.Component {
     const indexOfLastTodo = currentPage * userPerPage;
     const indexOfFirstTodo = indexOfLastTodo - userPerPage;
     const currentUsers = users.slice(indexOfFirstTodo, indexOfLastTodo);
-    console.log(this.props.state)
     const renderUsers = currentUsers.map((user, index) => {
       return <div key={user.id} className="user">
         <div className='user_info'>
