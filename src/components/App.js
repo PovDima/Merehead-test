@@ -15,7 +15,7 @@ class App extends React.Component {
   handleClick(event) {
     store.dispatch(isLoading(false))
     store.dispatch(nextPage(+event.target.id))
-    setTimeout(()=>{store.dispatch(isLoading(true))},1000)
+    setTimeout(() => { store.dispatch(isLoading(true)) }, 1000)
   }
   componentWillMount() {
     axios('https://cors-anywhere.herokuapp.com/http://dev.frevend.com/json/users.json').then(response => {
@@ -63,15 +63,15 @@ class App extends React.Component {
     return (
 
       <div className="App" >
-        <div>{
+        {
           isLoad ?
-            renderUsers :
+            <div>
+              {renderUsers}
+              <div className='controls__buttons'>
+                {renderPageNumbers}
+              </div></div> :
             <div className='spiner'><Spinner /></div>
         }
-        </div>
-        <div className='controls__buttons'>
-          {renderPageNumbers}
-        </div>
       </div>
     )
   }
