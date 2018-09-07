@@ -1,0 +1,110 @@
+* {
+  font-size: 2vw;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.user {
+  margin: 1%;
+  padding: 1%;
+}
+
+.user_info {
+  display: flex;
+  border: 2px solid black;
+  padding: 1%;
+}
+
+.user_info_text {
+  display: flex;
+  justify-content: space-around;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+p {
+  width: 50%;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.controls__buttons {
+  display: flex;
+  background-color: white;
+  border-radius: 0.15em;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  cursor: default;
+  margin: 0 0.25em;
+  padding: 0.5em 0.75em;
+}
+
+.button {
+  width: 50%;
+  border-radius: 5%;
+}
+
+.button:hover {
+  background: cadetblue;
+}
+
+.react-spinner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+}
+
+.react-spinner_bar {
+  -webkit-animation: react-spinner_spin 1.2s linear infinite;
+  -moz-animation: react-spinner_spin 1.2s linear infinite;
+  animation: react-spinner_spin 1.2s linear infinite;
+  border-radius: 5px;
+  background-color: rgb(44, 209, 214);
+  position: absolute;
+  width: 20%;
+  height: 7.8%;
+  top: -3.9%;
+  left: -10%;
+}
+
+@keyframes react-spinner_spin {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@-moz-keyframes react-spinner_spin {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@-webkit-keyframes react-spinner_spin {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+.spiner {
+  width: 100px;
+  height: 100px;
+}
