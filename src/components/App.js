@@ -69,7 +69,8 @@ class App extends React.Component {
               {renderUsers}
               <div className='controls__buttons'>
                 {renderPageNumbers}
-              </div></div> :
+              </div>
+              </div> :
             <div className='spiner'><Spinner /></div>
         }
       </div>
