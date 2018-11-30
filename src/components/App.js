@@ -77,11 +77,10 @@ class App extends React.Component {
     )
   }
 }
-const mapStateToProps = store => {// посмотрим, что же у нас в store?
+const mapStateToProps = store => {
   return {
     state: store,
   }
 }
 
-// в наш компонент App, с помощью connect(mapStateToProps)
 export default connect(mapStateToProps)(App)
